@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  python:
+    build:
+      context: ./python
+    image: python:latet
+    ports:
+      - "8081:8081"
+    container_name: beatmate_python
+    volumes:
+      - ./python:/app
+    stdin_open: true
+    tty: true
